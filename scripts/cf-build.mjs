@@ -16,4 +16,8 @@ await build({
     b.onResolve({ filter: /^\.\/sheets\.js$/ }, () => ({ path: path.join(root, "cloudflare/googleSheetsFetch.ts") }));
   } }],
 });
+await build({
+  entryPoints: [path.join(root, "cloudflare/aura.ts")], outfile: path.join(root, "functions/aura/[[path]].js"),
+  bundle: true, format: "esm", platform: "browser", target: "es2022", logLevel: "info",
+});
 console.log("cf-build: site in artifacts/my-engineering-project/dist/public, API in functions/api/[[path]].js");
