@@ -12,6 +12,10 @@ const OUT_PATH = resolve(PUBLIC_DIR, "og-image.jpg");
 const TMP_SVG = resolve(ROOT, ".og-image.tmp.svg");
 const TMP_BG = resolve(ROOT, ".og-image.bg.png");
 
+// Off Replit (e.g. Cloudflare Pages) ImageMagick may be missing: keep the committed og-image.jpg.
+try { execFileSync("magick", ["-version"], { stdio: "ignore" }); }
+catch { if (existsSync(OUT_PATH)) { console.log("[og-image] ImageMagick not found - keeping existing public/og-image.jpg"); process.exit(0); } throw new Error("ImageMagick (magick) is required to build og-image.jpg"); }
+
 const WIDTH = 1200;
 const HEIGHT = 630;
 

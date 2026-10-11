@@ -8,7 +8,8 @@
     "typecheck:libs": "tsc --build",
     "typecheck": "pnpm run typecheck:libs && pnpm -r --filter \"./artifacts/**\" --filter \"./scripts\" --if-present run typecheck",
     "lint": "pnpm -r --if-present run lint",
-    "lint:fix": "pnpm -r --if-present run lint:fix"
+    "lint:fix": "pnpm -r --if-present run lint:fix",
+    "build:cloudflare": "node scripts/cf-build.mjs"
   },
   "private": true,
   "devDependencies": {
@@ -23,5 +24,6 @@
   "dependencies": {
     "stripe": "^22.1.0",
     "stripe-replit-sync": "^1.0.0"
-  }
+  },
+  "packageManager": "pnpm@10.28.0"
 }
