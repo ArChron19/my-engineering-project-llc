@@ -5,10 +5,10 @@ import { createRequire } from "node:module";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const { build } = createRequire(path.join(root, "artifacts/api-server/package.json"))("esbuild");   // esbuild comes with the api-server workspace
 const run = (c, o = {}) => execSync(c, { stdio: "inherit", cwd: root, ...o });
 if (!process.env.CF_SKIP_INSTALL) run("pnpm install --frozen-lockfile --filter @workspace/my-engineering-project... --filter @workspace/api-server...");
 run("pnpm --filter @workspace/my-engineering-project run build", { env: { ...process.env, NODE_ENV: "production", PORT: "5000", BASE_PATH: "/" } });
+const { build } = createRequire(path.join(root, "artifacts/api-server/package.json"))("esbuild");   // installed above, with the api-server workspace
 await build({
   entryPoints: [path.join(root, "cloudflare/api.ts")], outfile: path.join(root, "functions/api/[[path]].js"),
   bundle: true, format: "esm", platform: "browser", target: "es2022", conditions: ["worker", "browser"], logLevel: "info",
