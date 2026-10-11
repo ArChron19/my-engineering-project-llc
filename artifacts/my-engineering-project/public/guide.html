@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Aura Guide | My Engineering Project</title>
+<style>html,body{margin:0;height:100%;background:#0f141c}</style>
+<!-- Aura as a guide in her own small window, e.g. beside the Google consent screen while recording the OAuth video.
+     /guide?tour=install-and-authorize   (tours: https://github.com/ArChron19/myengineeringproject/tree/aura/aura/tours) -->
+</head>
+<body>
+<script>
+  (function () {
+    var t = (new URLSearchParams(location.search).get('tour') || 'install-and-authorize').replace(/[^a-z0-9-]/gi, '');
+    var s = document.createElement('script');
+    s.src = 'https://cdn.jsdelivr.net/gh/ArChron19/myengineeringproject@aura/aura/aura-widget.js';
+    s.setAttribute('data-name', 'Aura'); s.setAttribute('data-mode', 'guide');
+    s.setAttribute('data-tour', 'https://raw.githubusercontent.com/ArChron19/myengineeringproject/aura/aura/tours/' + t + '.json');
+    document.body.appendChild(s);
+  })();
+</script>
+</body>
+</html>

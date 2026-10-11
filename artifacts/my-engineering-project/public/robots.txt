@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /aura-source
+Disallow: /guide
 
 Sitemap: https://myengineeringproject.com/sitemap.xml
