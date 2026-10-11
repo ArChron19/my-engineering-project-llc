@@ -10,7 +10,7 @@ const faqs = [
   },
   {
     q: "What platform is required to use selectNsolve™?",
-    a: "All selectNsolve™ products are built as add-ons for Google Sheets™. Basic is available now; Pro and Classroom are coming soon."
+    a: "All selectNsolve™ products are built as add-ons for Google Sheets™. Basic is available now; Basic Plus, Pro and Classroom are coming soon."
   },
   {
     q: "How does this approach transform traditional homework?",

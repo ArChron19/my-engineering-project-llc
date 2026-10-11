@@ -250,8 +250,8 @@ export default function TermsOfService() {
 
         <Section title="9. Subscription, Payment, and Refunds">
           <p>
-            Pro tier subscriptions are billed monthly ($7.99/month) or annually ($59/year) via
-            Stripe. Classroom tier pricing is separately agreed. Subscriptions renew automatically.
+            Basic Plus tier subscriptions are billed monthly ($1.99/month) or annually ($15/year), and
+            Pro tier subscriptions monthly ($7.99/month) or annually ($59/year), via Stripe. Classroom tier pricing is separately agreed. Subscriptions renew automatically.
             You may cancel at any time; cancellation takes effect at the end of the current billing
             period. No refunds are provided for partial billing periods.
           </p>

@@ -183,7 +183,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
                 name: "selectNsolve Basic™",
@@ -195,6 +195,17 @@ export default function Home() {
                 cta: "Install Free",
                 href: "/introduction",
                 ctaStyle: "bg-primary text-primary-foreground hover:bg-primary/90",
+              },
+              {
+                name: "selectNsolve Basic Plus™",
+                status: "Coming Soon",
+                statusColor: "bg-amber-100 text-amber-700 border-amber-200",
+                price: "$1.99/mo",
+                desc: "Everything in Basic, across your whole workbook: finds equations and variables in every tab, optionally including hidden tabs. Or $15/year.",
+                border: "border-border",
+                cta: "Notify Me",
+                href: "/support",
+                ctaStyle: "border border-border bg-background hover:bg-muted text-foreground",
               },
               {
                 name: "selectNsolve Pro™",

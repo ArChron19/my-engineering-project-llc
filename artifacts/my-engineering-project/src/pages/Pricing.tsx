@@ -3,7 +3,7 @@ import { Link } from "wouter";
 import { PageWrapper } from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Check, X, Zap, BookOpen, Users, Bot, ArrowRight } from "lucide-react";
+import { Check, X, Zap, BookOpen, Users, Bot, ArrowRight, Layers } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { BlockMath } from "@/components/MathRenderer";
 
@@ -33,6 +33,29 @@ const plans = [
       { label: "Unicode variable names & units", included: true },
       { label: "Google Sheets™ native integration", included: true },
       { label: "Community support", included: true },
+    ],
+  },
+  {
+    id: "basic-plus",
+    live: false,
+    name: "selectNsolve Basic Plus™",
+    tagline: "Basic, across your whole workbook",
+    icon: Layers,
+    color: "border-border",
+    headerColor: "bg-muted/60 text-foreground",
+    badgeText: "Coming Soon",
+    badgeColor: "bg-secondary text-secondary-foreground",
+    price: "$1.99/mo",
+    priceSub: "or $15/year — save 37%",
+    cta: "Notify Me",
+    ctaVariant: "outline" as const,
+    ctaHref: "/support",
+    external: false,
+    features: [
+      { label: "Everything in Basic", included: true },
+      { label: "Finds equations and variables in every tab", included: true },
+      { label: "Optionally includes hidden tabs", included: true },
+      { label: "Email support", included: true },
     ],
   },
   {
@@ -92,8 +115,8 @@ const faqs = [
     a: "Yes. Basic will always be free. It is the foundation of our mission to make equation solving accessible to every student and educator.",
   },
   {
-    q: "When will Pro and Classroom be available?",
-    a: "We are actively developing both tiers. Use the Support page to register your interest and you will be among the first to know when they launch.",
+    q: "When will Basic Plus, Pro and Classroom be available?",
+    a: "We are actively developing all three paid tiers. Use the Support page to register your interest and you will be among the first to know when they launch.",
   },
   {
     q: "What equations can Basic solve?",
@@ -119,12 +142,12 @@ export default function Pricing() {
             Start Free. Grow With Us.
           </h1>
           <p className="text-xl text-muted-foreground">
-            selectNsolve Basic™ is available now at no cost. Pro and Classroom tiers are in development — register your interest and we'll notify you at launch.
+            selectNsolve Basic™ is available now at no cost. Basic Plus, Pro and Classroom are in development — register your interest and we'll notify you at launch.
           </p>
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid lg:grid-cols-3 gap-8 items-stretch">
+        <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-6 items-stretch">
           {plans.map((plan) => {
             const Icon = plan.icon;
             return (
