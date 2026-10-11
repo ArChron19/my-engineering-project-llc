@@ -1,0 +1,127 @@
+kind = "web"
+previewPath = "/"
+title = "My Engineering Project"
+version = "1.0.0"
+id = "artifacts/my-engineering-project"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+localPort = 21837
+name = "web"
+paths = ["/"]
+
+[services.development]
+run = "pnpm --filter @workspace/my-engineering-project run dev"
+
+[services.env]
+PORT = "21837"
+BASE_PATH = "/"
+
+[services.production]
+build = ["pnpm", "--filter", "@workspace/my-engineering-project", "run", "build"]
+publicDir = "artifacts/my-engineering-project/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/introduction"
+to = "/introduction.html"
+
+[[services.production.rewrites]]
+from = "/introduction/"
+to = "/introduction.html"
+
+[[services.production.rewrites]]
+from = "/faq"
+to = "/faq.html"
+
+[[services.production.rewrites]]
+from = "/faq/"
+to = "/faq.html"
+
+[[services.production.rewrites]]
+from = "/skills"
+to = "/skills.html"
+
+[[services.production.rewrites]]
+from = "/skills/"
+to = "/skills.html"
+
+[[services.production.rewrites]]
+from = "/practical-engineering"
+to = "/practical-engineering.html"
+
+[[services.production.rewrites]]
+from = "/practical-engineering/"
+to = "/practical-engineering.html"
+
+[[services.production.rewrites]]
+from = "/study-guides"
+to = "/study-guides.html"
+
+[[services.production.rewrites]]
+from = "/study-guides/"
+to = "/study-guides.html"
+
+[[services.production.rewrites]]
+from = "/pricing"
+to = "/pricing.html"
+
+[[services.production.rewrites]]
+from = "/pricing/"
+to = "/pricing.html"
+
+[[services.production.rewrites]]
+from = "/developer-api"
+to = "/developer-api.html"
+
+[[services.production.rewrites]]
+from = "/developer-api/"
+to = "/developer-api.html"
+
+[[services.production.rewrites]]
+from = "/support"
+to = "/support.html"
+
+[[services.production.rewrites]]
+from = "/support/"
+to = "/support.html"
+
+[[services.production.rewrites]]
+from = "/privacy-policy"
+to = "/privacy-policy.html"
+
+[[services.production.rewrites]]
+from = "/privacy-policy/"
+to = "/privacy-policy.html"
+
+[[services.production.rewrites]]
+from = "/terms-of-service"
+to = "/terms-of-service.html"
+
+[[services.production.rewrites]]
+from = "/terms-of-service/"
+to = "/terms-of-service.html"
+
+[[services.production.rewrites]]
+from = "/manual"
+to = "/manual.html"
+
+[[services.production.rewrites]]
+from = "/manual/"
+to = "/manual.html"
+
+[[services.production.rewrites]]
+from = "/aura-source"
+to = "/aura-source.html"
+
+[[services.production.rewrites]]
+from = "/aura-source/"
+to = "/aura-source.html"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"

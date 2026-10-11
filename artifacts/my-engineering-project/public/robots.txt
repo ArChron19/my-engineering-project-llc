@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /aura-source
+
+Sitemap: https://myengineeringproject.com/sitemap.xml

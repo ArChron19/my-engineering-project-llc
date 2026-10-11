@@ -1,0 +1,56 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "ewxY5BAQSCef8rrBhK_5J"
+uri = "file://artifacts/my-engineering-project/public/og-home.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "EJvA9pXvD2t5w1xxF3Hzy"
+uri = "file://artifacts/my-engineering-project/public/og-pricing.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "GgN_i5WU_HH4F0b_0_8IA"
+uri = "file://artifacts/my-engineering-project/public/og-study-guides.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "9O8foIaGqAJ2UOQgE8fZ9"
+uri = "file://artifacts/my-engineering-project/public/og-developer-api.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "mZJFlkL3Ld4lf0b0igtkb"
+uri = "file://attached_assets/generated_images/og-introduction.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "233vqENIBzGyNpPhbaocs"
+uri = "file://attached_assets/generated_images/og-faq.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "oeneOD3LXR85Ln4JsFs0B"
+uri = "file://attached_assets/generated_images/og-skills.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "cwTQ1S_LhArw6F5gIV9Oo"
+uri = "file://attached_assets/generated_images/og-practical-engineering.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "qW50PoAE_kCE58TrGISnw"
+uri = "file://attached_assets/generated_images/og-support.png"
+type = "image"
+title = "generated_image"
